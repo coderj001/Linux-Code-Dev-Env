@@ -14,6 +14,7 @@ yes | pacman -Syyu jdk-openjdk \
   unzip \
   zip \
   tar \
+  python-pip
 
 
 cp ./bash_profile ~/.bash_profile
@@ -26,7 +27,7 @@ pip install neovim --upgrade
 curl -sLf https://spacevim.org/install.sh | bash -s -- --install neovim
 
 mkdir -p $JAVA_CONFIG
-cd $JAVA_CONFIG && curl -sLO https://github.com/google/google-java-format/releases/download/v1.15.0/google-java-format-1.15.0.jar && curl -sLO https://download.eclipse.org/jdtls/milestones/1.9.0/jdt-language-server-1.9.0-202203031534.tar.gz
+cd $JAVA_CONFIG && curl -LO https://github.com/google/google-java-format/releases/download/v1.15.0/google-java-format-1.15.0.jar && curl -LO https://download.eclipse.org/jdtls/milestones/1.9.0/jdt-language-server-1.9.0-202203031534.tar.gz
 tar -xf jdt-language-server-1.9.0-202203031534.tar.gz && rm jdt-language-server-1.9.0-202203031534.tar.gz
 cd $CURRENT_DIR
 
